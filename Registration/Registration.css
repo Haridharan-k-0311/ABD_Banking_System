@@ -1,0 +1,33 @@
+body {
+  background-color: #EFF4F9;
+}
+
+.navbar-light.navbar-brand {
+  font-weight: 500;
+  color: rgba(0, 0, 0, .9);
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav li {
+  margin-right: 35px;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.required {
+  color: red;
+}

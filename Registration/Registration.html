@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABD Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Registration.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function enableSubmitBtn() {
+        document.getElementById('RegisterBtn').disabled = false;
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">ABD Bank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ABD Bank</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Registration.html">Open Accourt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../TransferPage/TransferPage.html">Transactions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../TransactionHistory/TransactionHistory.html">Account Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../LoginPage/LoginPage.html">Sign up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../LoginPage/LoginPage.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5 ">
+      <div class="row justify-content-center">
+        <div class="col-7 col-md-6 col-lg-4">
+          <div class="registration-box mt-5" id="registration-box">
+            <h2>Customer Registration</h2>
+            <form class="form mt-2" method="POST" action="/registration">
+              <div class="mb-3">
+                <label for="firstname">First Name <span class="required">*</span></label>
+                <input type="text" class="form-control" id="firstname" name="Firstname" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="Lastname">
+              </div>
+
+              <div class="mb-3">
+                <label for="email">Email ID <span class="required">*</span></label> 
+                <input type="email" class="form-control" id="email" name="Emailid" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="pan">PAN No<span class="required">*</span></label>
+                <input type="text" class="form-control" id="pan" name="PanNo" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="mobile">Mobile No <span class="required">*</span></label>
+                <input type="text" class="form-control" id="mobile" name="MobileNo" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="aadhar">Aadhaar No <span class="required">*</span></label>
+                <input type="text" class="form-control" id="aadhar" name="AadharNo" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="password">Account Password <span class="required">*</span></label>
+                <input type="password" class="form-control" id="password" name="Password" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="address">Address <span class="required">*</span></label> 
+                <textarea class="form-control" id="address" name="Address" rows="3" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <div class="g-recaptcha" data-sitekey="6Lez50oqAAAAAPmIyWvA7kDRILZH0nbvI_kz_Tvf" data-callback="enableSubmitBtn"></div>
+              </div>
+
+              <div class="mb-3 mt-3">
+                <input type="submit" class="btn btn-primary" id="RegisterBtn" disabled="disabled" value="Register">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container { 
+  background-color: #fff; 
+  border-radius: 12px; 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+  width: 90%; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 30px; 
+  box-sizing: border-box;
+}
+
+.h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-top: 30px;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
+}
+
+.h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.p {
+  color: #666;
+  margin: 8px 0;
+}
+
+.transaction-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-type {
+  color: #00b315;
+  font-weight: bold;
+}
+
+.logout-btn {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.button {
+  padding: 12px 20px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e60000;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking User Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./TransactionHistory.css">
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">ABD Bank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ABD Bank</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Registration/Registration.html">Open Accourt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../TransferPage/TransferPage.html">Transactions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./TransactionHistory.html">Account Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../LoginPage/LoginPage.html">Sign up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../LoginPage/LoginPage.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container mt-5 mb-2">
+      <h2>Transaction History</h2>
+      <div class="container">
+        <h5>Filter By Time</h5>
+        <form class="form-inline" action="/accountDetails" method="get">
+          <div class="form-group mb-2">
+            <label for="startDate" class="sr-only">Start Date:</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" required>
+          </div>
+            
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="endDate" class="sr-only">End Date:</label>
+            <input type="date" class="form-control" id="endDate" name="endDate" required>
+          </div>
+            
+          <button type="submit" class="btn btn-primary mb-2 ">Filter</button>
+        </form>
+      </div>
+              
+      <div class="container mt-5">
+        <h5>Filter By Branch</h5>
+        <form class="form-inline" action="/accountDetails" method="get">
+          <div class="form-group mr-3">
+            <label for="exampleSelect" class="sr-only">Select Example</label>
+            <select class="form-control" id="exampleSelect" name="branch">
+              <option selected>Choose an option</option>
+              <option value="branch1">Branch-1</option>
+              <option value="branch2">Branch-2</option>
+              <option value="branch3">Branch-3</option>
+              <option value="branch4">Branch-4</option>
+              <option value="branch5">Branch-5</option>
+              <option value="branch6">Branch-6</option>
+              <option value="branch7">Branch-7</option>
+              <option value="branch8">Branch-8</option>
+              <option value="branch9">Branch-9</option>
+              <option value="branch10">Branch-10</option>
+
+            </select>
+          </div>
+              
+          <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+      </div>
+            
+      <div class="col-md-12 mt-5">
+        <ul class="list-group">
+<!--        <% if (transaction && transaction.length> 0) { %>   -->
+<!--          <% transaction.forEach(transactionItem=> {%>      -->
+              <li class="list-group-item">
+
+                <span class="fw-bold">From:</span>
+<!--            <%= transactionItem.from %>,                    -->
+                
+                <span class="fw-bold">To:</span> 
+<!--            <%= transactionItem.to %>,                      -->
+              
+                <span class="fw-bold">amount:</span>
+<!--            <%= transactionItem.amount %>                   -->
+              </li>
+<!--          <% }); %>                                         -->
+<!--          <% } else { %>                                    -->
+              
+              <li class="list-group-item">
+                No transactions found.
+              </li>
+
+<!--          <% } %>                                           -->
+        </ul>
+      </div>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
